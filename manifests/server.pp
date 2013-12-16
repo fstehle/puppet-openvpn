@@ -85,6 +85,10 @@
 #     Should match the form "n m".
 #   Default: None
 #
+# [*duplicatecn*]
+#   Boolean.  Add duplicate-cn directive to server.
+#   Default: false
+#
 #
 # === Examples
 #
@@ -140,7 +144,8 @@ define openvpn::server(
   $server = '',
   $push = [],
   $route = [],
-  $keepalive = ''
+  $keepalive = '',
+  $duplicatecn = false
 ) {
 
   include openvpn
